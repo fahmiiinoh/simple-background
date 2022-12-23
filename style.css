@@ -94,3 +94,8 @@ nav ul li a:hover::after{
     bottom: 0;
     z-index: -1;
 }
+
+#icon{
+    width: 80px;
+    cursor: pointer;
+}
