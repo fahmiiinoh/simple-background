@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'poppins', sans-serif;
 }
 
 .jancuk{
@@ -35,12 +35,27 @@ nav .fnlogo{
 nav ul li{
     list-style: none;
     display: inline-block;
-    margin-left: 40px;
+    margin: 10px 30px;
 }
 nav a{
     text-decoration: none;
     color: #fff;
     font-size: 17px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '' ;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
+}
+nav ul li a:hover::after{
+    width: 50%;
 }
 
 .konten{
@@ -49,9 +64,20 @@ nav a{
 
 .konten h1{
     font-size: 160px;
-    color: #fff;
     font-weight: 600;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(src/background.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
 }
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
 .konten a{
     text-decoration: none;
     color: #fff;
